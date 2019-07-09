@@ -56,6 +56,7 @@ void DisplayBoard(vector<int> &Row)
 
 /**
 *	Recursive implementation of the solution to the eight-queens problem
+*   Edited by Jonathan Laughlin
 */
 bool PlaceQueen(int column) {
 	if (column == NUMBER_COLS) { // Base Condition
