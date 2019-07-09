@@ -76,11 +76,12 @@ bool PlaceQueen(int column) {
 			/**
 			 * recursivel call place queen in next column
 			 * if returns true then valid slot for the queen
+			 * if it is invalid slot needs to be unassigned
 			 */
 			if ( PlaceQueen( column + 1 ) )
 				return true;
 	
-			RowPlacement[row] = UNASSIGN_VALUE;// unassign spot on board if queen can not go there
+			RowPlacement[row] = UNASSIGN_VALUE;// unassign spot on board since queen can not be placed there
 		}
 		return false; // Tried every available row, so it is time to call it quits
 	}
